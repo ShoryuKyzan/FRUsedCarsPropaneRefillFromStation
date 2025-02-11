@@ -1,0 +1,5 @@
+name=Filibuster Rhymes' Used Cars! Propane Station Truck Refill
+poster=poster.png
+id=FRUsedCarsPropaneRefillFromStation
+description=This extends FRUsedCarsFT to allow propane trucks to be refilled from propane stations. Requires: TiRekS Propane Upgraded [PropStation], Filibuster Rhymes' Used Cars! Fuel Test [FRUsedCarsFT] (which is used by the rest of that mod).
+url=
