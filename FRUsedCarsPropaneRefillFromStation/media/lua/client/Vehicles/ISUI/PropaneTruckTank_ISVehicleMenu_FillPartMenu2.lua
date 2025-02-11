@@ -5,8 +5,6 @@ if not PropaneTanker.old_ISVehicleMenu_FillPartMenu then
 end
 
 function ISVehicleMenu.FillPartMenu(playerIndex, context, slice, vehicle)
-	print("FillPartMenu- FRUsedCarsPropaneRefillFromStation"); -- XXX
-
 	local playerObj = getSpecificPlayer(playerIndex);
 
 	local propaneStation = ISVehiclePartMenu.getNearbyPropanePump(vehicle);
