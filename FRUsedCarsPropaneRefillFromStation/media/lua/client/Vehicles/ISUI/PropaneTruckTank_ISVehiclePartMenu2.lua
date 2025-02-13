@@ -3,6 +3,7 @@
 --***********************************************************
 require "Vehicle/ISVehiclePartMenu"
 
+if not PRFS_VehiclePartMenu then PRFS_VehiclePartMenu = {} end
 
 function ISVehiclePartMenu.onPumpPropane(tank, player, propStation)
 	if tank and luautils.walkAdj(player, propStation:getSquare())  then	
@@ -43,5 +44,43 @@ function ISVehiclePartMenu.getNearbyPropanePump(vehicle)
 				end
 			end
 		end
+	end
+end
+
+function PRFS_VehiclePartMenu.getPropaneTankNotFull(playerObj, typeToItem, type, typeClass)
+	local equipped = playerObj:getPrimaryHandItem()
+	
+	if equipped and equipped:getType() == type and equipped:getUsedDelta() < 1 then
+		return equipped
+	end
+	
+	if typeToItem[typeClass] then
+		local gasCan = nil
+		local usedDelta = -1
+		for _,item in ipairs(typeToItem[typeClass]) do
+			if item:getUsedDelta() < 1 and item:getUsedDelta() > usedDelta then
+				gasCan = item
+				usedDelta = gasCan:getUsedDelta()
+			end
+		end
+		if gasCan then return gasCan end
+	end
+		
+	return nil
+end
+
+
+function PRFS_VehiclePartMenu.onTakePropane(playerObj, part, type, typeClass)
+	if playerObj:getVehicle() then
+		ISVehicleMenu.onExit(playerObj)
+	end
+	local typeToItem = VehicleUtils.getItems(playerObj:getPlayerNum())
+	local item = PRFS_VehiclePartMenu.getPropaneTankNotFull(playerObj, typeToItem, type, typeClass)
+	if item then
+		ISVehiclePartMenu.toPlayerInventory(playerObj, item)
+		ISTimedActionQueue.add(ISPathFindAction:pathToVehicleArea(playerObj, part:getVehicle(), part:getArea()))
+		ISInventoryPaneContextMenu.equipWeapon(item, false, false, playerObj:getPlayerNum())
+		--ISTimedActionQueue.add(FuelTruck_TakePropaneFromVehicle:new(playerObj, part, item, 50))
+		ISTimedActionQueue.add(ISTakeGasolineFromVehicle:new(playerObj, part, item, 50))
 	end
 end

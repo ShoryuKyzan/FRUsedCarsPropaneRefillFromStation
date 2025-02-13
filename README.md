@@ -1,6 +1,11 @@
-# Filibuster Rhymes' Used Cars! Propane Station Truck Refill
+# Filibuster Rhymes' Used Cars! Propane Truck/Tanks Refill
 
-This project provides a mod for Project Zomboid that extends Filibuster Rhymes Used Cars & TiRekS Propane Upgraded that allows refilling propane trucks (Franklin EF70) from a propane station.
+This project provides a mod for Project Zomboid that extends Filibuster Rhymes Used Cars & TiRekS Propane Upgraded.
+## Features
+* refilling propane trucks (Franklin EF70) from a propane station
+* refilling Industrial Propane Tanks (LargePropaneTank) from the truck and station
+* refilling Propane Storage Tanks (HugePropaneTank) from the truck when in inventory
+  * TODO: this might not be an item that can be kept in the inventory, so maybe need it to be ground placeable
 
 # Requirements
 Subscribe and add these Mod IDs
