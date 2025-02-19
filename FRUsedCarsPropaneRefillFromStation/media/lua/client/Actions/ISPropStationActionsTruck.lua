@@ -20,6 +20,8 @@ function ISPropStationActionsTruck:update()
 		local Obj = self.propStation;
 		local args = { x = Obj:getX(), y = Obj:getY(), z = Obj:getZ(), fuelAmount = litres }
 		CPropStationSystem.instance:sendCommand(self.character, 'fuelChange', args)
+		local args2 = { vehicle = self.vehicle:getId(), part = self.tank:getId(), amount = litres }
+		sendClientCommand(self.character, 'vehicle', 'setContainerContentAmount', args2)
 		self.amountSent = litres
 	end
 
@@ -56,11 +58,12 @@ function ISPropStationActionsTruck:perform()
 	ISBaseTimedAction.perform(self);
 end
 
-function ISPropStationActionsTruck:new(character, propStation, tank, time)
+function ISPropStationActionsTruck:new(character, vehicle, propStation, tank, time)
 	local o = {}
 	setmetatable(o, self)
 	self.__index = self
 	o.character = character;
+	o.vehicle = vehicle;
 	o.propStation = propStation;
     --o.square = square;
 	o.tank = tank;

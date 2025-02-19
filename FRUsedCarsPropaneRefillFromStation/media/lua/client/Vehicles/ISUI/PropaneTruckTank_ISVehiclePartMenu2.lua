@@ -5,14 +5,15 @@ require "Vehicle/ISVehiclePartMenu"
 
 if not PRFS_VehiclePartMenu then PRFS_VehiclePartMenu = {} end
 
-function ISVehiclePartMenu.onPumpPropane(tank, player, propStation)
+function ISVehiclePartMenu.onPumpPropane(tank, player, vehicle, propStation)
 	if tank and luautils.walkAdj(player, propStation:getSquare())  then	
 		-- if luautils.haveToBeTransfered(player, tank) then
 			-- ISTimedActionQueue.add(ISInventoryTransferAction:new(player, tank, tank:getContainer(), player:getInventory()));
 		-- end
 		ISTimedActionQueue.add(
 			ISPropStationActionsTruck:new(
-				player, 
+				player,
+				vehicle, 
 				propStation, 
 				tank, 
 				(tank:getContainerCapacity() - tank:getContainerContentAmount()) * 300
