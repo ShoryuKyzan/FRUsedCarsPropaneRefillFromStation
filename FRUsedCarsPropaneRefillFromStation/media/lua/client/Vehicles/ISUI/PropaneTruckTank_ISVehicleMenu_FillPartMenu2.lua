@@ -27,9 +27,9 @@ function ISVehicleMenu.FillPartMenu(playerIndex, context, slice, vehicle)
 			if part:isContainer() and part:getContainerContentType() == "Propane Storage" 
 			and part:getContainerContentAmount() < part:getContainerCapacity() then
 				if slice then
-					slice:addSlice(getText("Fill Propane Storage Tank From Propane Station"), getTexture("Item_PropaneTank"), ISVehiclePartMenu.onPumpPropane, part, playerObj, vehicle, propaneStation)
+					slice:addSlice(getText("Fill Truck Propane Tank From Propane Station"), getTexture("Item_PropaneTank"), ISVehiclePartMenu.onPumpPropane, part, playerObj, vehicle, propaneStation)
 				else
-					context:addOption(getText("Fill Propane Storage Tank From Propane Station"), part, ISVehiclePartMenu.onPumpPropane, playerObj, vehicle, propaneStation);
+					context:addOption(getText("Fill Truck Propane Tank From Propane Station"), part, ISVehiclePartMenu.onPumpPropane, playerObj, vehicle, propaneStation);
 				end
 			end
 		end			
