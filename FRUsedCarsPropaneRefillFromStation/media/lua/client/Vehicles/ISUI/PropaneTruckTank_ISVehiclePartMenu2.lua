@@ -71,6 +71,7 @@ function PRFS_VehiclePartMenu.getPropaneTankNotFull(playerObj, typeToItem, type,
 end
 
 
+-- does not physically move the tank. intended for tanks on the ground or in a nearby container
 function PRFS_VehiclePartMenu.onTakePropane(playerObj, part, type, typeClass)
 	if playerObj:getVehicle() then
 		ISVehicleMenu.onExit(playerObj)
@@ -78,10 +79,6 @@ function PRFS_VehiclePartMenu.onTakePropane(playerObj, part, type, typeClass)
 	local typeToItem = VehicleUtils.getItems(playerObj:getPlayerNum())
 	local item = PRFS_VehiclePartMenu.getPropaneTankNotFull(playerObj, typeToItem, type, typeClass)
 	if item then
-		ISVehiclePartMenu.toPlayerInventory(playerObj, item)
-		ISTimedActionQueue.add(ISPathFindAction:pathToVehicleArea(playerObj, part:getVehicle(), part:getArea()))
-		ISInventoryPaneContextMenu.equipWeapon(item, false, false, playerObj:getPlayerNum())
-		--ISTimedActionQueue.add(FuelTruck_TakePropaneFromVehicle:new(playerObj, part, item, 50))
 		ISTimedActionQueue.add(ISTakeGasolineFromVehicle:new(playerObj, part, item, 50))
 	end
 end
