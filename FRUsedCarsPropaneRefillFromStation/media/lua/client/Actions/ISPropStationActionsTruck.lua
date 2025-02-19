@@ -20,15 +20,15 @@ function ISPropStationActionsTruck:update()
 		local Obj = self.propStation;
 		local args = { x = Obj:getX(), y = Obj:getY(), z = Obj:getZ(), fuelAmount = litres }
 		CPropStationSystem.instance:sendCommand(self.character, 'fuelChange', args)
-		local args2 = { vehicle = self.vehicle:getId(), part = self.tank:getId(), amount = litres }
-		sendClientCommand(self.character, 'vehicle', 'setContainerContentAmount', args2)
 		self.amountSent = litres
 	end
 
 	
 	local litresTaken = litres - self.propStationStart
 	local newAmount = self.tankStart + litresTaken;
-	self.tank:setContainerContentAmount(newAmount)
+	local args2 = { vehicle = self.vehicle:getId(), part = self.tank:getId(), amount = newAmount }
+	sendClientCommand(self.character, 'vehicle', 'setContainerContentAmount', args2)
+	-- XXX might not need - self.tank:setContainerContentAmount(newAmount)
 end
 
 function ISPropStationActionsTruck:start()
