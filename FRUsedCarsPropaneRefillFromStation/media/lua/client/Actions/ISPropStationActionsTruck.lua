@@ -13,7 +13,7 @@ end
 function ISPropStationActionsTruck:update()
 	self.character:faceLocation(self.propStation:getSquare():getX(), self.propStation:getSquare():getY())
 	
-	local litres = self.propStationStart + (self.propStationStart - self.propStationTarget)*self:getJobDelta()
+	local litres = self.propStationStart + (self.propStationTarget - self.propStationStart)*self:getJobDelta()
 	litres = math.ceil(litres)
 	
 	if litres ~= self.amountSent then
@@ -24,7 +24,7 @@ function ISPropStationActionsTruck:update()
 	end
 
 	
-	local litresTaken = litres - self.propStationStart
+	local litresTaken = (litres - self.propStationStart) * -1
 	local newAmount = self.tankStart + litresTaken;
 	local args2 = { vehicle = self.vehicle:getId(), part = self.tank:getId(), amount = newAmount }
 	sendClientCommand(self.character, 'vehicle', 'setContainerContentAmount', args2)
