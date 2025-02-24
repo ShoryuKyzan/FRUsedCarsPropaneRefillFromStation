@@ -25,17 +25,17 @@ function ISVehicleMenu.FillPartMenu(playerIndex, context, slice, vehicle)
 	
 	for i=1,vehicle:getPartCount() do
 		local part = vehicle:getPartByIndex(i-1)		
-		if part:isContainer() and part:getContainerContentType() == "Propane Storage" 
-		and part:getContainerContentAmount() < part:getContainerCapacity() then
-			if propaneStation and propaneStation:getModData()["fuelAmount"] > 0 then
+		if part:isContainer() and part:getContainerContentType() == "Propane Storage"  then
+			if propaneStation and propaneStation:getModData()["fuelAmount"] > 0
+			and part:getContainerContentAmount() < part:getContainerCapacity() then
 				if slice then
 					slice:addSlice(getText("Fill Truck Propane Tank From Propane Station"), getTexture("Item_PropaneTank"), ISVehiclePartMenu.onPumpPropane, part, playerObj, vehicle, propaneStation)
 				else
 					context:addOption(getText("Fill Truck Propane Tank From Propane Station"), part, ISVehiclePartMenu.onPumpPropane, playerObj, vehicle, propaneStation);
 				end
-				TRPS_FillPartMenu.addTankOption(playerObj, typeToItem, part, context, slice, "LargePropaneTank", "TW.LargePropaneTank", "(Industrial)")
-				TRPS_FillPartMenu.addTankOption(playerObj, typeToItem, part, context, slice, "HugePropaneTank", "TW.HugePropaneTank", "(Storage)")
 			end
+			TRPS_FillPartMenu.addTankOption(playerObj, typeToItem, part, context, slice, "LargePropaneTank", "TW.LargePropaneTank", "(Industrial)")
+			TRPS_FillPartMenu.addTankOption(playerObj, typeToItem, part, context, slice, "HugePropaneTank", "TW.HugePropaneTank", "(Storage)")
 		end
 	end
 
