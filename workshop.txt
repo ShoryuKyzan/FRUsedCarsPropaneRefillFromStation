@@ -1,40 +1,38 @@
-version=1
+version=3
 title=Filibuster Rhymes' Used Cars! Propane Station Truck/Tanks Refill
-description=# Filibuster Rhymes' Used Cars! Propane Truck/Tanks Refill
+description=[h1]Filibuster Rhymes' Used Cars! Propane Truck/Tanks Refill[/h1]
 description=
 description=This project provides a mod for Project Zomboid that extends Filibuster Rhymes Used Cars & TiRekS Propane Upgraded.
 description=
-description=## Features
+description=[h2]Features[/h2]
 description=* refilling propane trucks (Franklin EF70) from a propane station
 description=* refilling Industrial Propane Tanks (LargePropaneTank) from the truck and station
 description=* refilling Propane Storage Tanks (HugePropaneTank) from the truck
 description=* use the vehicle menu or context menu to do these actions.
 description=
-description=## Help
+description=[h2]Help[/h2]
 description=* For filling tanks from the truck, make sure they are in inventory/on ground/in a container next to you when you access the vehicle menu.
 description=
-description=# Requirements/Server Load order
+description=[h2]Requirements/Server Load order[/h2]
 description=Subscribe and add these Mod IDs
-description=* PropStation [TiRekS Propane Upgraded (PropStation)](https://steamcommunity.com/sharedfiles/filedetails/?id=2748628874&searchtext=tirek)
-description=* FRUsedCarsFT [Filibuster Rhymes' Used Cars! Fuel Test (FRUsedCarsFT)](https://steamcommunity.com/sharedfiles/filedetails/?id=1510950729)
+description=* PropStation [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2748628874]TiRekS Propane Upgraded (PropStation)[/url]
+description=* FRUsedCarsFT [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1510950729]Filibuster Rhymes' Used Cars! Fuel Test (FRUsedCarsFT)[/url] 
 description= (and other Filibuster Rhymes used cars mod ids required to activate this mod in the first place)
 description=* FRUsedCarsPropaneRefillFromStation (this mod)
 description=  * For servers, place this in the list after the other requirements
 description=
-description=# Credits
+description=[h2]Credits[/h2]
 description=This extends and uses inspiration from the following mods:
-description=* [TiRekS Propane Upgraded (PropStation)](https://steamcommunity.com/sharedfiles/filedetails/?id=2748628874&searchtext=tirek)
-description=* [Filibuster Rhymes' Used Cars! Fuel Test (FRUsedCarsFT)](https://steamcommunity.com/sharedfiles/filedetails/?id=1510950729)
+description=* [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2748628874]TiRekS Propane Upgraded (PropStation)[/url]
+description=* [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1510950729]Filibuster Rhymes' Used Cars! Fuel Test (FRUsedCarsFT)[/url] 
 description=
-description=# License
+description=[h2]License[/h2]
 description=Free to use/modify/extend/bundle with other mods. Do not claim it as your own.
-description=MIT License
+description=[url=https://github.com/ShoryuKyzan/FRUsedCarsPropaneRefillFromStation?tab=License-1-ov-file#readme]MIT License[/url]
 description=No need to copy in the license file when using locally or on a server.
 description=
 description=
-description=Workshop ID: TBD
+description=Workshop ID: 3436239634
 description=Mod ID: FRUsedCarsPropaneRefillFromStation
-tags=propane,truck
+tags=items,vehicles
 visibility=public
-
-
