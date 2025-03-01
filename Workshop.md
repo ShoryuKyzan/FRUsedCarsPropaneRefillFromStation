@@ -30,17 +30,6 @@ Free to use/modify/extend/bundle with other mods. Do not claim it as your own.
 MIT License
 No need to copy in the license file when using locally or on a server.
 
-# Development Scripts
 
-### Build
-
-The `build.bat` script zips up the contents of the `FRUsedCarsPropaneRefillFromStation` folder into a zip file of the same name.
-
-### Clean
-
-The `clean.bat` script removes the local mod from the user profile's Zomboid\mods folder.
-
-### Deploy
-
-The `deploy.bat` script copies the local mod to the user profile's Zomboid\mods folder for testing.
-
+Workshop ID: TBD
+Mod ID: FRUsedCarsPropaneRefillFromStation
