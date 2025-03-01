@@ -18,6 +18,7 @@ This mod for Project Zomboid extends Filibuster Rhymes Used Cars & TiRekS Propan
 ## Help
 * For filling tanks from the truck, make sure they are in inventory/on ground/in a container next to you when you access the vehicle menu.
 * The very back of the truck doesn't seem to want to show the radial menu. Use context menu, or walk to the side or the front of the truck to see the new options in the radial menu.
+* Per online research of propane truck-filling, the station must have electricity to fill the truck. Electricity isn't required to fill smaller tanks though.
 
 # Requirements/Server Load order
 Subscribe and add these Mod IDs
