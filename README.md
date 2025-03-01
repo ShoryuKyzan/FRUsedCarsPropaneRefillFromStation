@@ -14,6 +14,7 @@ This project provides a mod for Project Zomboid that extends Filibuster Rhymes U
 
 ## Help
 * For filling tanks from the truck, make sure they are in inventory/on ground/in a container next to you when you access the vehicle menu.
+* The very back of the truck doesn't seem to want to show the radial menu. Use context menu, or walk to the side or the front of the truck to see the new options in the radial menu.
 
 # Requirements/Server Load order
 Subscribe and add these Mod IDs

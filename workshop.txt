@@ -15,6 +15,7 @@ description=* use the vehicle menu or context menu to do these actions.
 description=
 description=[h2]Help[/h2]
 description=* For filling tanks from the truck, make sure they are in inventory/on ground/in a container next to you when you access the vehicle menu.
+description=* The very back of the truck doesn't seem to want to show the radial menu. Use context menu, or walk to the side or the front of the truck to see the new options in the radial menu.
 description=
 description=[h2]Requirements/Server Load order[/h2]
 description=Subscribe and add these Mod IDs
