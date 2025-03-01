@@ -47,3 +47,8 @@ The `clean.bat` script removes the local mod from the user profile's Zomboid\mod
 
 The `deploy.bat` script copies the local mod to the user profile's Zomboid\mods folder for testing.
 
+
+### Deploy to Workshop folder
+
+The `deploy-workshop.bat` script copies the local mod to the user profile's Zomboid\Workshop folder for upload. Copies the workshop.txt. This has a description that should be manually copied in from Workshop.bbcode when it needs to be updated.
+
