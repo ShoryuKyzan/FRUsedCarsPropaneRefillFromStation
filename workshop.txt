@@ -1,5 +1,5 @@
 version=3
-title=Filibuster Rhymes' Used Cars! Propane Station Truck/Tanks Refill
+title=Filibuster Rhymes' Used Cars! Propane Station Truck/Tanks Refill [B41]
 description=[h1]Filibuster Rhymes' Used Cars! Propane Truck/Tanks Refill[/h1]
 description=
 description=[h1]Build 41[/h1]
