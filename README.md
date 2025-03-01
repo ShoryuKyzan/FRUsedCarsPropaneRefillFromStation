@@ -1,5 +1,8 @@
 https://steamcommunity.com/sharedfiles/itemedittext/?id=3436239634
 
+Workshop ID: 3436239634
+Mod ID: FRUsedCarsPropaneRefillFromStation
+
 # Build 41
 
 # Filibuster Rhymes' Used Cars! Propane Truck/Tanks Refill

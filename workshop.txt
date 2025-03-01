@@ -35,8 +35,5 @@ description=Free to use/modify/extend/bundle with other mods. Do not claim it as
 description=[url=https://github.com/ShoryuKyzan/FRUsedCarsPropaneRefillFromStation?tab=License-1-ov-file#readme]MIT License[/url]
 description=No need to copy in the license file when using locally or on a server.
 description=
-description=
-description=Workshop ID: 3436239634
-description=Mod ID: FRUsedCarsPropaneRefillFromStation
 tags=items,vehicles
 visibility=public
