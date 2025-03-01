@@ -5,6 +5,7 @@ TRPS_Tanks_Menu.doMenu = function(player, context, worldobjects, test)
 	
 	local MyhaveFuel = nil;
 	local tank = nil;
+	local playerObj = getSpecificPlayer(player);
 	
 	for i,v in ipairs(worldobjects) do
 		if CPropStationSystem.instance:isValidIsoObject(v) and CPropStationSystem:isValidPart(v:getModData()["partSquare"]) then
@@ -15,14 +16,9 @@ TRPS_Tanks_Menu.doMenu = function(player, context, worldobjects, test)
     -- Allow refilling Industrial Propane Tanks
     if MyhaveFuel and MyhaveFuel:getModData()["fuelAmount"] > 0 then
 		if test == true then return true; end	
-		local propaneTanks = getSpecificPlayer(player):getInventory():getItemsFromType("LargePropaneTank");
-		
-        for i=0, propaneTanks:size() -1 do
-            if propaneTanks:get(i):getUsedDelta() < 1 then
-                tank = propaneTanks:get(i);
-                break;
-            end
-		end
+		-- yes this is for vehicles but it still works. gets items from all nearby containers
+		local typeToItem = VehicleUtils.getItems(playerObj:getPlayerNum())
+		local tank = PRFS_VehiclePartMenu.getPropaneTankNotFull(playerObj, typeToItem, "LargePropaneTank", "TW.LargePropaneTank")
 		
 		if tank then
 			context:addOption(getText("Refill Large Propane Tank"), tank, TRPS_Menu.onTakeFuel, getSpecificPlayer(player), MyhaveFuel);
