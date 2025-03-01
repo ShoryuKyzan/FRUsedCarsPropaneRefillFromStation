@@ -4,7 +4,7 @@ This project provides a mod for Project Zomboid that extends Filibuster Rhymes U
 
 ## Features
 * refilling propane trucks (Franklin EF70) from a propane station
-* refilling Industrial Propane Tanks (LargePropaneTank) from the truck and station
+* refilling Industrial Propane Tanks (LargePropaneTank) from the truck and station (must be in player inventory)
 * refilling Propane Storage Tanks (HugePropaneTank) from the truck
 * use the vehicle menu or context menu to do these actions.
 
@@ -23,7 +23,6 @@ Subscribe and add these Mod IDs
 This extends and uses inspiration from the following mods:
 * [TiRekS Propane Upgraded (PropStation)](https://steamcommunity.com/sharedfiles/filedetails/?id=2748628874&searchtext=tirek)
 * [Filibuster Rhymes' Used Cars! Fuel Test (FRUsedCarsFT)](https://steamcommunity.com/sharedfiles/filedetails/?id=1510950729)
-
 
 # License
 Free to use/modify/extend/bundle with other mods. Do not claim it as your own.
