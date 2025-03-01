@@ -1,5 +1,5 @@
 version=1
-title=Filibuster Rhymes' Used Cars! Propane Station Truck Refill
+title=Filibuster Rhymes' Used Cars! Propane Station Truck/Tanks Refill
 description=# Filibuster Rhymes' Used Cars! Propane Truck/Tanks Refill
 description=
 description=This project provides a mod for Project Zomboid that extends Filibuster Rhymes Used Cars & TiRekS Propane Upgraded.
